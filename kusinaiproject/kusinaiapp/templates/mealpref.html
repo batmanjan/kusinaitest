@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Preferences</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">kusinAIready</div>
+            <div class="nav-menu">
+                <button class="burger-menu">☰</button>
+                <div class="nav-links">
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'saved' %}">Saved</a>
+                    <a href="{% url 'cooked' %}">Cooked</a>
+                    <a href="{% url 'settings' %}">Settings</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Meal Preferences</h1>
+        <form method="post">
+            {% csrf_token %}
+            <!-- Survey form similar to survey.html -->
+            <!-- Include survey fields and buttons here -->
+
+            <button type="button" onclick="window.history.back()">Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </main>
+</body>
+</html>

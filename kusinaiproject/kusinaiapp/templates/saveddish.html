@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Dish Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <main>
+        <button onclick="window.history.back()">Back</button>
+        <div class="dish-details">
+            <img src="{% static 'images/dish.jpg' %}" alt="Dish Name">
+            <h1>Dish Name</h1>
+            <p>Prep Time: 30 mins</p>
+            <p>Family Size: 4</p>
+            <p>Cost: $15</p>
+            <p>Cooking Skill: Intermediate</p>
+            <p>Age Range: Adults (19-59)</p>
+
+            <div class="card">
+                <h2>Ingredients</h2>
+                <p>Ingredient list...</p>
+            </div>
+            <div class="card">
+                <h2>Procedure</h2>
+                <p>Cooking steps...</p>
+            </div>
+            <div class="card">
+                <h2>Nutritional Guide</h2>
+                <p>Nutritional information...</p>
+            </div>
+
+            <button type="button">Delete</button>
+            <button type="button">Done</button>
+        </div>
+    </main>
+</body>
+</html>
